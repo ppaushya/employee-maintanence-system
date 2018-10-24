@@ -1,0 +1,69 @@
+create table user_master(
+userId varchar(6) primary key,
+userName varchar(15),
+userPassword varchar(20),
+userType varchar(10));
+
+create table Department(
+dept_ID int primary key,
+dept_Name varchar(50));
+
+create table employee(
+emp_Id varchar(6) primary key,
+emp_First_Name varchar(25),
+emp_Last_Name varchar(25),
+emp_Date_Of_Birth date,
+Emp_Date_Of_Joining date,
+Emp_dept_id int,
+Emp_Grade varchar(2),
+Emp_designation varchar(50),
+Emp_Basic int,
+Emp_Gender varchar(1) not null,
+Emp_Marital_status varchar(1),
+Emp_home_Address varchar(100),
+Emp_contact_Num varchar(15));
+
+create table Grade_Master(
+Grade_code varchar(2) primary key,
+Description varchar(10),
+Min_Salary int,
+Max_salary int);
+
+
+
+insert into Department values(1,"financial manager");
+
+insert into Department values(2,"non financial manager");
+
+insert into Department values(3,"analyst");
+
+insert into Department values(4,"senior analyst");
+
+insert into Department values(5,"consultant");
+
+insert into Department values(6,"associate analyst");
+
+
+insert into Grade_Master values("M1","this is m1",1000000,5000000);
+
+
+insert into Grade_Master values("M2","this is m2",500000,1000000);
+
+insert into Grade_Master values("M3","this is m3",200000,500000);
+
+insert into Grade_Master values("M4","this is m4",100000,200000);
+
+insert into Grade_Master values("M5","this is m5",50000,100000);
+
+insert into Grade_Master values("M6","this is m6",25000,50000);
+
+insert into Grade_Master values("M7","this is m7",10000,25000);
+
+create table forgotpassword(
+
+nickname varchar(30),
+school varchar(30),
+fatherprofession varchar(30),
+hobby varchar(30)
+
+);
